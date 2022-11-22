@@ -39,7 +39,7 @@ public class AdditionTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"3,5,8", "3,1,4"})
+    @CsvSource({"3,5,8", "3,1,4", "3,2,5"})
     void given_two_integers_should_return_sum_of_both(int input1, int input2, int expected){
         Fraction givenFirstFraction = new Fraction(input1);
         Fraction givenSecondFraction= new Fraction(input2);
