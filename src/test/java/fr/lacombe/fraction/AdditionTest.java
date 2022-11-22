@@ -33,8 +33,8 @@ public class AdditionTest {
         Fraction zero = new Fraction(0);
         Fraction givenFraction= new Fraction(input);
 
-        Fraction sommeFraction = zero.addition(givenFraction);
+        Fraction resultFraction = zero.addition(givenFraction);
 
-        Assertions.assertEquals(expected, sommeFraction.getValue());
+        Assertions.assertEquals(expected, resultFraction.getValue());
     }
 }
