@@ -17,7 +17,7 @@ public class AdditionTest {
 
 
     @ParameterizedTest
-    @CsvSource({"5,5"})
+    @CsvSource({"5,5", "3,3"})
     void given_integer_plus_zero_should_return_integer(int input, int expected){
         Fraction fraction1 = new Fraction(input);
         Fraction fraction2 = new Fraction(0);
