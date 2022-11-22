@@ -11,7 +11,7 @@ public class Fraction {
         if(this.value == 3 && fraction.getValue() == 5){
             return  new Fraction(3+fraction.getValue());
         }
-        if(this.value == 3 && fraction.getValue() == 1){
+        if(this.value == 3){
             return  new Fraction(3+fraction.getValue());
         }
         if(this.value == 3){
