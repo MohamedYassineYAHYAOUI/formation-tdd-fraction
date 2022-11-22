@@ -8,8 +8,8 @@ public class AdditionTest {
 
     @Test
     void given_in_zero_zero_should_return_zero(){
-        Fraction fraction1 = new Fraction(0);
-        Fraction sommeFraction = fraction1.addition(fraction1);
+        Fraction fraction = new Fraction(0);
+        Fraction sommeFraction = fraction.addition(fraction);
 
         Assertions.assertEquals(0, sommeFraction.getValue());
     }
