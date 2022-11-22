@@ -14,10 +14,6 @@ public class Fraction {
     }
 
     public int getValue() {
-        if (value == 5 || value == 3 || value == 4) {
-            return value;
-        }
-
         return value;
     }
 }
