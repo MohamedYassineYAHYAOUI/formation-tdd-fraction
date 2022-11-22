@@ -8,7 +8,7 @@ public class Fraction {
     }
 
     public Fraction addition(Fraction fraction) {
-        return new Fraction(value);
+        return this;
     }
 
     public int getValue() {
