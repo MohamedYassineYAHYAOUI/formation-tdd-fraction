@@ -30,9 +30,10 @@ public class AdditionTest {
     @ParameterizedTest
     @CsvSource({"3,3", "2,2", "1,1"})
     void given_in_zero_and_integer_should_return_integer(int input, int expected){
-        Fraction fraction1 = new Fraction(0);
-        Fraction fraction2 = new Fraction(input);
-        Fraction sommeFraction = fraction1.addition(fraction2);
+        Fraction zero = new Fraction(0);
+        Fraction givenFraction= new Fraction(input);
+
+        Fraction sommeFraction = zero.addition(givenFraction);
 
         Assertions.assertEquals(expected, sommeFraction.getValue());
     }
