@@ -38,13 +38,14 @@ public class AdditionTest {
         Assertions.assertEquals(expected, resultFraction.getValue());
     }
 
-    @Test
-    void given_two_integers_should_return_sum_of_both(){
-        Fraction givenFirstFraction = new Fraction(3);
-        Fraction givenSecondFraction= new Fraction(5);
+    @ParameterizedTest
+    @CsvSource({"3,5,8"})
+    void given_two_integers_should_return_sum_of_both(int input1, int input2, int expected){
+        Fraction givenFirstFraction = new Fraction(input1);
+        Fraction givenSecondFraction= new Fraction(input2);
 
         Fraction resultFraction = givenFirstFraction.plus(givenSecondFraction);
 
-        Assertions.assertEquals(8, resultFraction.getValue());
+        Assertions.assertEquals(expected, resultFraction.getValue());
     }
 }
