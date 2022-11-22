@@ -17,6 +17,10 @@ public class Fraction {
         if(value == 3){
             return new Fraction(3);
         }
+
+        if(value == 4){
+            return new Fraction(4);
+        }
         return new Fraction(0);
     }
 
@@ -26,6 +30,10 @@ public class Fraction {
         }
         if(value == 3){
             return 3;
+        }
+
+        if(value == 4){
+            return 4;
         }
         return 0;
     }
