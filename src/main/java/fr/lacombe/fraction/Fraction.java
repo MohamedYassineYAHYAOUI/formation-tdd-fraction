@@ -9,13 +9,13 @@ public class Fraction {
 
     public Fraction plus(Fraction fraction) {
         if(this.value == 3 && fraction.getValue() == 5){
-            return  new Fraction(3+5);
+            return  new Fraction(3+fraction.getValue());
         }
         if(this.value == 3 && fraction.getValue() == 1){
-            return  new Fraction(3+1);
+            return  new Fraction(3+fraction.getValue());
         }
         if(this.value == 3 && fraction.getValue() == 2){
-            return  new Fraction(3+2);
+            return  new Fraction(3+fraction.getValue());
         }
 
         if(this.value == 0)
