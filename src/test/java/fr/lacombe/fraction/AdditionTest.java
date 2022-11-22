@@ -37,4 +37,14 @@ public class AdditionTest {
 
         Assertions.assertEquals(expected, resultFraction.getValue());
     }
+
+    @Test
+    void given_two_integers_should_return_sum_of_both(){
+        Fraction givenFirstFraction = new Fraction(3);
+        Fraction givenSecondFraction= new Fraction(5);
+
+        Fraction resultFraction = givenFirstFraction.plus(givenSecondFraction);
+
+        Assertions.assertEquals(8, resultFraction.getValue());
+    }
 }
