@@ -18,6 +18,6 @@ public class Fraction {
             return value;
         }
 
-        return 0;
+        return value;
     }
 }
