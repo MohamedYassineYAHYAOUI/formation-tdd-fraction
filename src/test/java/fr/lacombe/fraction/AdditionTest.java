@@ -19,11 +19,12 @@ public class AdditionTest {
     @ParameterizedTest
     @CsvSource({"5,5", "3,3", "4,4"})
     void given_integer_plus_zero_should_return_integer(int input, int expected){
-        Fraction fraction1 = new Fraction(input);
-        Fraction fraction2 = new Fraction(0);
-        Fraction sommeFraction = fraction1.addition(fraction2);
+        Fraction givenFraction = new Fraction(input);
+        Fraction zero = new Fraction(0);
 
-        Assertions.assertEquals(expected, sommeFraction.getValue());
+        Fraction resultFraction = givenFraction.addition(zero);
+
+        Assertions.assertEquals(expected,  resultFraction.getValue());
     }
 
     @ParameterizedTest
