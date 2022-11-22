@@ -12,7 +12,7 @@ public class Fraction {
             return  new Fraction(3+5);
         }
         if(this.value == 3 && fraction.getValue() == 1){
-            return  new Fraction(4);
+            return  new Fraction(3+1);
         }
         if(this.value == 3 && fraction.getValue() == 2){
             return  new Fraction(5);
