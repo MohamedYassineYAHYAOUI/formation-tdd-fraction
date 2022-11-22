@@ -10,7 +10,7 @@ public class AdditionTest {
     void given_in_zero_zero_should_return_zero(){
         Fraction zero = new Fraction(0);
 
-        Fraction resultFraction = zero.add(zero);
+        Fraction resultFraction = zero.plus(zero);
 
         Assertions.assertEquals(0, resultFraction.getValue());
     }
@@ -22,7 +22,7 @@ public class AdditionTest {
         Fraction givenFraction = new Fraction(input);
         Fraction zero = new Fraction(0);
 
-        Fraction resultFraction = givenFraction.add(zero);
+        Fraction resultFraction = givenFraction.plus(zero);
 
         Assertions.assertEquals(expected,  resultFraction.getValue());
     }
@@ -33,7 +33,7 @@ public class AdditionTest {
         Fraction zero = new Fraction(0);
         Fraction givenFraction= new Fraction(input);
 
-        Fraction resultFraction = zero.add(givenFraction);
+        Fraction resultFraction = zero.plus(givenFraction);
 
         Assertions.assertEquals(expected, resultFraction.getValue());
     }
