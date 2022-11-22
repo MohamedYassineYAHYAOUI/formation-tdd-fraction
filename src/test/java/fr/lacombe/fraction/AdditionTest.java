@@ -26,4 +26,12 @@ public class AdditionTest {
         Assertions.assertEquals(expected, sommeFraction.getValue());
     }
 
+    @Test
+    void given_in_zero_and_three_should_return_three(){
+        Fraction fraction1 = new Fraction(0);
+        Fraction fraction2 = new Fraction(3);
+        Fraction sommeFraction = fraction1.addition(fraction2);
+
+        Assertions.assertEquals(3, sommeFraction.getValue());
+    }
 }

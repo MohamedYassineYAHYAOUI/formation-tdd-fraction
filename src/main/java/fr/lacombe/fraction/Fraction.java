@@ -8,6 +8,8 @@ public class Fraction {
     }
 
     public Fraction addition(Fraction fraction) {
+        if(this.value == 0)
+            return fraction;
         return this;
     }
 
