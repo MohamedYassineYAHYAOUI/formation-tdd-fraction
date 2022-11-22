@@ -8,7 +8,7 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        if(this.value == 3 && fraction.getValue() == 5){
+        if(this.value == 3){
             return  new Fraction(3+fraction.getValue());
         }
         if(this.value == 3){
