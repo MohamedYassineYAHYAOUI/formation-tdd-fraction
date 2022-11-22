@@ -1,7 +1,8 @@
 package fr.lacombe.fraction;
-;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class AdditionTest {
 
@@ -14,12 +15,15 @@ public class AdditionTest {
         Assertions.assertEquals(0, sommeFraction.getValue());
     }
 
-    @Test
-    void given_five_plus_zero_should_return_five(){
-        Fraction fraction1 = new Fraction(5);
+
+    @ParameterizedTest
+    @CsvSource({"5,5"})
+    void given_integer_plus_zero_should_return_integer(int input, int expected){
+        Fraction fraction1 = new Fraction(input);
         Fraction fraction2 = new Fraction(0);
         Fraction sommeFraction = fraction1.addition(fraction2);
 
-        Assertions.assertEquals(5, sommeFraction.getValue());
+        Assertions.assertEquals(expected, sommeFraction.getValue());
     }
+
 }
