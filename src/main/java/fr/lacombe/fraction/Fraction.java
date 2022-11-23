@@ -17,9 +17,9 @@ public class Fraction {
     public Fraction plus(Fraction fraction) {
         if(this.denominator == 2 && fraction.getDenominator() == 3) {
             if(this.value == 3 && fraction.value == 2 ){
-                return new Fraction(13, 6);
+                return new Fraction((this.value*3)+(fraction.value*2), 6);
             }
-            return new Fraction(5,6);
+            return new Fraction((this.value * 3)+(fraction.getNumerator() * 2),6);
         }
         return new Fraction(this.value + fraction.getValue(), denominator);
     }
