@@ -15,7 +15,7 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public static Fraction FractionFactory(int numerator, int denominator) {
+    public static Fraction create(int numerator, int denominator) {
         int intGcd = computeGcd(numerator, denominator);
         return new Fraction(numerator/intGcd, denominator/intGcd);
     }
@@ -28,12 +28,12 @@ public class Fraction {
     }
 
 
-    public static Fraction FractionFactory(int numerator) {
+    public static Fraction create(int numerator) {
         return new Fraction(numerator);
     }
 
     public Fraction plus(Fraction fraction) {
-        return FractionFactory((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
+        return create((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
                 this.denominator * fraction.denominator);
     }
 
