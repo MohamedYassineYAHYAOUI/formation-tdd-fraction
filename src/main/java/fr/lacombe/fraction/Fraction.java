@@ -21,7 +21,7 @@ public class Fraction {
         if(denominator == 3 ){
             return new Fraction(this.value + fraction.getValue(), denominator);
         }
-        return new Fraction(this.value + fraction.getValue(), 2);
+        return new Fraction(this.value + fraction.getValue(), denominator);
 
     }
 
