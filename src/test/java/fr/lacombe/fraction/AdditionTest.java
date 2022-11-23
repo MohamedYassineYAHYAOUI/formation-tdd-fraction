@@ -54,7 +54,7 @@ public class AdditionTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"3,4,8,36,32"})
+    @CsvSource({"3,4,8,36,32", "1,2,3,5,6"})
     void given_different_fractions_with_same_numerator_de_should_return_sum_of_both_fraction(int numerator, int denominator1,
                                                                                              int denominator2, int expectedNumerator,
                                                                                              int expectedDenominator) {
@@ -66,6 +66,8 @@ public class AdditionTest {
         Assertions.assertEquals(expectedNumerator, resultFraction.getNumerator());
         Assertions.assertEquals(expectedDenominator, resultFraction.getDenominator());
     }
+
+
 
 
 }
