@@ -4,11 +4,10 @@ import java.math.BigInteger;
 
 public class Fraction {
     private final int numerator;
-    private int denominator;
+    private final int denominator;
 
     private Fraction(int numerator) {
-        this.numerator = numerator;
-        this.denominator = 1;
+        this(numerator,1);
     }
 
     private Fraction(int numerator, int denominator) {
@@ -17,12 +16,17 @@ public class Fraction {
     }
 
     public static Fraction FractionFactory(int numerator, int denominator) {
+        int intGcd = computeGcd(numerator, denominator);
+        return new Fraction(numerator/intGcd, denominator/intGcd);
+    }
+
+    private static int computeGcd(int numerator, int denominator) {
         BigInteger b1 = BigInteger.valueOf(numerator);
         BigInteger b2 = BigInteger.valueOf(denominator);
         BigInteger gcd = b1.gcd(b2);
-        int intGcd = gcd.intValue();
-        return new Fraction(numerator/intGcd, denominator/intGcd);
+        return gcd.intValue();
     }
+
 
     public static Fraction FractionFactory(int numerator) {
         return new Fraction(numerator);
