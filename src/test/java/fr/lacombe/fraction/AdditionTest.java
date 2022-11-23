@@ -19,7 +19,7 @@ public class AdditionTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"1,2,6,7", "1,2,4,5","1,2,2,3","1,3,1,2","2,3,5,7"})
+    @CsvSource({"1,2,6,7", "1,2,4,5","1,2,2,3","1,3,1,2","2,3,5,7","2,5,6,8"})
     void given_two_fractions_with_same_denominator_should_return_a_fraction_with_same_denominator(int numerator1, int denominator,
                                                                                                   int numerator2, int expectedNumerator){
         Fraction firstFraction = new Fraction(numerator1, denominator);
