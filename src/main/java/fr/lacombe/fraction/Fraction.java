@@ -4,22 +4,30 @@ public class Fraction {
     private final int numerator;
     private int denominator;
 
-    public Fraction(int numerator) {
+    private Fraction(int numerator) {
         this.numerator = numerator;
-
     }
 
-    public Fraction(int numerator, int denominator) {
+    private Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
+    public static Fraction FractionFactory(int numerator, int denominator) {
+        return new Fraction(numerator, denominator);
+    }
+
+    public static Fraction FractionFactory(int numerator) {
+        return new Fraction(numerator);
+    }
+
     public Fraction plus(Fraction fraction) {
         if (this.denominator!= fraction.getDenominator()) {
-            return new Fraction((this.numerator * fraction.getDenominator()) + (fraction.getNumerator() * this.denominator), fraction.getDenominator() * this.denominator);
+            return FractionFactory((this.numerator * fraction.getDenominator()) + (fraction.getNumerator() * this.denominator), fraction.getDenominator() * this.denominator);
         }
-        return new Fraction(this.numerator + fraction.getNumerator(), denominator);
+        return FractionFactory(this.numerator + fraction.getNumerator(), denominator);
     }
+
 
     public int getNumerator() {
         return numerator;
