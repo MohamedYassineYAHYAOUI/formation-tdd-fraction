@@ -18,15 +18,17 @@ public class AdditionTest {
         Assertions.assertEquals(expected, resultFraction.getValue());
     }
 
-    @Test
-    void given_two_fractions_with_same_denominator_should_return_a_fraction_with_same_denominator(){
-        Fraction firstFraction = new Fraction(1,2);
-        Fraction secondFraction = new Fraction(4,2);
+    @ParameterizedTest
+    @CsvSource({"1,2,6,7"})
+    void given_two_fractions_with_same_denominator_should_return_a_fraction_with_same_denominator(int numerator1, int denominator,
+                                                                                                  int numerator2, int expectedNumerator){
+        Fraction firstFraction = new Fraction(numerator1, denominator);
+        Fraction secondFraction = new Fraction(numerator2,denominator);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
-        Assertions.assertEquals(5, resultFraction.getNumerator());
-        Assertions.assertEquals(2, resultFraction.getDenominator());
+        Assertions.assertEquals(expectedNumerator, resultFraction.getNumerator());
+        Assertions.assertEquals(denominator, resultFraction.getDenominator());
     }
 
     @Test
@@ -39,5 +41,7 @@ public class AdditionTest {
         Assertions.assertEquals(7, resultFraction.getNumerator());
         Assertions.assertEquals(2, resultFraction.getDenominator());
     }
+
+
 
 }
