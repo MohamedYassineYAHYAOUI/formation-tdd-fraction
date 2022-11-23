@@ -1,11 +1,14 @@
 package fr.lacombe.fraction;
 
+import java.math.BigInteger;
+
 public class Fraction {
     private final int numerator;
     private int denominator;
 
     private Fraction(int numerator) {
         this.numerator = numerator;
+        this.denominator = 1;
     }
 
     private Fraction(int numerator, int denominator) {
@@ -14,7 +17,11 @@ public class Fraction {
     }
 
     public static Fraction FractionFactory(int numerator, int denominator) {
-        return new Fraction(numerator, denominator);
+        BigInteger b1 = BigInteger.valueOf(numerator);
+        BigInteger b2 = BigInteger.valueOf(denominator);
+        BigInteger gcd = b1.gcd(b2);
+        int intGcd = gcd.intValue();
+        return new Fraction(numerator/intGcd, denominator/intGcd);
     }
 
     public static Fraction FractionFactory(int numerator) {
