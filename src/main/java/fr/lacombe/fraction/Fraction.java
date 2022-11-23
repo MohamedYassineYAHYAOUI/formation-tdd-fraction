@@ -21,11 +21,7 @@ public class Fraction {
         if(this.denominator == 4 && fraction.denominator == 8){
             return new Fraction((this.numerator * fraction.getDenominator())+(fraction.getNumerator() *this.denominator),32);
         }
-        return new Fraction(this.numerator + fraction.intValue(), denominator);
-    }
-
-    public int intValue() {
-        return numerator;
+        return new Fraction(this.numerator + fraction.getNumerator(), denominator);
     }
 
     public int getNumerator() {

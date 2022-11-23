@@ -15,7 +15,7 @@ public class AdditionTest {
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
-        Assertions.assertEquals(expected, resultFraction.intValue());
+        Assertions.assertEquals(expected, resultFraction.getNumerator());
     }
 
     @ParameterizedTest
