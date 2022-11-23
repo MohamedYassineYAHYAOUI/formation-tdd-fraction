@@ -41,6 +41,7 @@ public class AdditionTest {
         Assertions.assertEquals(5, resultFraction.getNumerator());
         Assertions.assertEquals(6, resultFraction.getDenominator());
     }
+
     @Test
     void given_different_fractions_should_return_sum_of_both_fraction() {
         Fraction firstFraction = new Fraction(3, 2);
@@ -50,6 +51,17 @@ public class AdditionTest {
 
         Assertions.assertEquals(13, resultFraction.getNumerator());
         Assertions.assertEquals(6, resultFraction.getDenominator());
+    }
+
+    @Test
+    void given_different_fractions_with_same_numerator_de_should_return_sum_of_both_fraction() {
+        Fraction firstFraction = new Fraction(3, 4);
+        Fraction secondFraction = new Fraction(3,8);
+
+        Fraction resultFraction = firstFraction.plus(secondFraction);
+
+        Assertions.assertEquals(36, resultFraction.getNumerator());
+        Assertions.assertEquals(32, resultFraction.getDenominator());
     }
 
 

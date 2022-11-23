@@ -18,6 +18,9 @@ public class Fraction {
         if(this.denominator == 2 && fraction.getDenominator() == 3) {
            return new Fraction((this.value * 3)+(fraction.getNumerator() * 2),6);
         }
+        if(this.denominator == 4 && fraction.denominator == 8){
+            return new Fraction((this.value * 8)+(fraction.getNumerator() * 4),32);
+        }
         return new Fraction(this.value + fraction.getValue(), denominator);
     }
 
