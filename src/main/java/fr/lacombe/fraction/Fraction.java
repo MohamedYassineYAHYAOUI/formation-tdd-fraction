@@ -19,7 +19,7 @@ public class Fraction {
            return new Fraction((this.value * fraction.getDenominator())+(fraction.getNumerator() * this.denominator),6);
         }
         if(this.denominator == 4 && fraction.denominator == 8){
-            return new Fraction((this.value * 8)+(fraction.getNumerator() * 4),32);
+            return new Fraction((this.value * fraction.getDenominator())+(fraction.getNumerator() *this.denominator),32);
         }
         return new Fraction(this.value + fraction.getValue(), denominator);
     }
