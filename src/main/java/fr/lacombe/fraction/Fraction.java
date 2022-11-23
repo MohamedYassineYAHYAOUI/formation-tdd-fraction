@@ -33,8 +33,8 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        return FractionFactory((this.numerator * fraction.denominator) + (fraction.numerator * this.denominator),
-                fraction.denominator * this.denominator);
+        return FractionFactory((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
+                this.denominator * fraction.denominator);
     }
 
 
