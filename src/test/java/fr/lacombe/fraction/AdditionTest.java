@@ -67,4 +67,9 @@ public class AdditionTest {
         Assertions.assertEquals(expectedDenominator, resultFraction.getDenominator());
     }
 
+    /* To do all
+    Faire un test pour la simplication
+
+    */
+
 }
