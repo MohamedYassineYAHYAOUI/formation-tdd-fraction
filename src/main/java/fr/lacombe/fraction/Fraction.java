@@ -33,10 +33,8 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        if (this.denominator!= fraction.getDenominator()) {
-            return FractionFactory((this.numerator * fraction.getDenominator()) + (fraction.getNumerator() * this.denominator), fraction.getDenominator() * this.denominator);
-        }
-        return FractionFactory(this.numerator + fraction.getNumerator(), denominator);
+        return FractionFactory((this.numerator * fraction.getDenominator()) + (fraction.getNumerator() * this.denominator),
+                fraction.getDenominator() * this.denominator);
     }
 
 
