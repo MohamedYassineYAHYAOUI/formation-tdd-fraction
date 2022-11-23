@@ -31,6 +31,17 @@ public class AdditionTest {
         Assertions.assertEquals(denominator, resultFraction.getDenominator());
     }
 
+    @Test
+    void given_different_fractions_should_return_sum_of_both_fractions() {
+        Fraction firstFraction = new Fraction(1, 2);
+        Fraction secondFraction = new Fraction(1,3);
+
+        Fraction resultFraction = firstFraction.plus(secondFraction);
+
+        Assertions.assertEquals(5, resultFraction.getNumerator());
+        Assertions.assertEquals(6, resultFraction.getDenominator());
+    }
+
 
 
 }
