@@ -6,15 +6,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class AdditionTest {
 
-    @Test
-    void given_in_zero_zero_should_return_zero(){
-        Fraction zero = new Fraction(0);
-
-        Fraction resultFraction = zero.plus(zero);
-
-        Assertions.assertEquals(0, resultFraction.getValue());
-    }
-
 
     @ParameterizedTest
     @CsvSource({"5,5", "3,3", "4,4"})
@@ -39,7 +30,7 @@ public class AdditionTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"3,5,8", "3,1,4", "3,2,5", "0,0,0"})
+    @CsvSource({"3,5,8", "3,1,4", "3,2,5", "0,0,0","0,3,3", "0,2,2", "0,1,1" })
     void given_two_integers_should_return_sum_of_both(int input1, int input2, int expected){
         Fraction givenFirstFraction = new Fraction(input1);
         Fraction givenSecondFraction= new Fraction(input2);
@@ -48,4 +39,6 @@ public class AdditionTest {
 
         Assertions.assertEquals(expected, resultFraction.getValue());
     }
+
+
 }
