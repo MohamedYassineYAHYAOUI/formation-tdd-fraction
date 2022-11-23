@@ -3,11 +3,12 @@ package fr.lacombe.fraction;
 import java.math.BigInteger;
 
 public class Fraction {
+    private static final int DEFAULT_DENOMINATOR = 1;
     private final int numerator;
     private final int denominator;
 
     private Fraction(int numerator) {
-        this(numerator,1);
+        this(numerator, DEFAULT_DENOMINATOR);
     }
 
     private Fraction(int numerator, int denominator) {
