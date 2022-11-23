@@ -66,8 +66,4 @@ public class AdditionTest {
         Assertions.assertEquals(expectedNumerator, resultFraction.getNumerator());
         Assertions.assertEquals(expectedDenominator, resultFraction.getDenominator());
     }
-
-
-
-
 }
