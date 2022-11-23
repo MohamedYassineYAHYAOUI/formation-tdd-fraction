@@ -19,7 +19,7 @@ public class AdditionTest {
     }
 
     @Test
-    void given_two_fraction_with_same_denominator_should_return_sum_of_both(){
+    void given_two_fractions_with_same_denominator_should_return_a_fraction_with_same_denominator(){
         Fraction firstFraction = new Fraction(1,2);
         Fraction secondFraction = new Fraction(4,2);
 
