@@ -15,11 +15,8 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        if(this.denominator == 2 && fraction.getDenominator() == 3) {
-           return new Fraction((this.numerator * fraction.getDenominator())+(fraction.getNumerator() * this.denominator), fraction.getDenominator()*this.denominator);
-        }
-        if(this.denominator == 4 && fraction.denominator == 8){
-            return new Fraction((this.numerator * fraction.getDenominator())+(fraction.getNumerator() *this.denominator),fraction.getDenominator()*this.denominator);
+        if (this.denominator == 2 && fraction.getDenominator() == 3 || this.denominator == 4 && fraction.denominator == 8) {
+            return new Fraction((this.numerator * fraction.getDenominator()) + (fraction.getNumerator() * this.denominator), fraction.getDenominator() * this.denominator);
         }
         return new Fraction(this.numerator + fraction.getNumerator(), denominator);
     }
