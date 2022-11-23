@@ -27,7 +27,6 @@ public class Fraction {
         return gcd.intValue();
     }
 
-
     public static Fraction create(int numerator) {
         return new Fraction(numerator);
     }
@@ -36,7 +35,6 @@ public class Fraction {
         return create((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
                 this.denominator * fraction.denominator);
     }
-
 
     public int getNumerator() {
         return numerator;
