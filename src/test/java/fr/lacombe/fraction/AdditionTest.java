@@ -1,6 +1,7 @@
 package fr.lacombe.fraction;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -17,5 +18,15 @@ public class AdditionTest {
         Assertions.assertEquals(expected, resultFraction.getValue());
     }
 
+    @Test
+    void given_two_fraction_with_same_denominator_should_return_sum_of_both(){
+        Fraction firstFraction = new Fraction(1,2);
+        Fraction secondFraction = new Fraction(4,2);
+
+        Fraction resultFraction = firstFraction.plus(secondFraction);
+
+        Assertions.assertEquals(5, resultFraction.getNumerator());
+        Assertions.assertEquals(2, resultFraction.getDenominator());
+    }
 
 }

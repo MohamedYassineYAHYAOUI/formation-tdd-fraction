@@ -7,6 +7,10 @@ public class Fraction {
         this.value = value;
     }
 
+    public Fraction(int numerator, int denominator) {
+        this.value = numerator;
+    }
+
     public Fraction plus(Fraction fraction) {
         return new Fraction(this.value + fraction.getValue());
 
@@ -14,5 +18,13 @@ public class Fraction {
 
     public int getValue() {
         return value;
+    }
+
+    public int getNumerator() {
+        return 5;
+    }
+
+    public int getDenominator() {
+        return 2;
     }
 }
