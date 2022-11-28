@@ -11,8 +11,13 @@ public class MultiplicationTest {
     }
 
     @Test
-    void negativeFraction() {
+    void negative() {
         Assertions.assertEquals(Fraction.create(-1, 25), Fraction.create(-1, 5).multiply(Fraction.create(1, 5)));
+    }
+
+    @Test
+    void twoNegative() {
+        Assertions.assertEquals(Fraction.create(3, 4), Fraction.create(-5, 10).multiply(Fraction.create(3, -2)));
     }
 
 }
