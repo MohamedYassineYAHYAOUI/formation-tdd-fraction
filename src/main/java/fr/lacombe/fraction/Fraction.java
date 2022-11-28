@@ -61,6 +61,6 @@ public class Fraction {
         if (numerator == -1 && secondFraction.numerator == 1 && denominator == 3) {
             return Fraction.create(numerator - secondFraction.numerator, denominator);
         }
-        return Fraction.create(numerator - secondFraction.numerator);
+        return Fraction.create(numerator - secondFraction.numerator, denominator);
     }
 }
