@@ -1,6 +1,7 @@
 package fr.lacombe.fraction;
 
 import java.math.BigInteger;
+import java.util.Objects;
 
 public class Fraction {
     private static final int DEFAULT_DENOMINATOR = 1;
@@ -13,6 +14,19 @@ public class Fraction {
 
     public int getDenominator() {
         return denominator;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
+        return numerator == fraction.numerator && denominator == fraction.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
     }
 
     private Fraction(int numerator) {
@@ -58,7 +72,7 @@ public class Fraction {
     public Fraction minus(Fraction fraction) {
         return this.plus(fraction.opposite());
     }
-    
+
     private Fraction opposite() {
         return create(-numerator, denominator);
     }
