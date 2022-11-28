@@ -31,6 +31,9 @@ public class EqualsTest {
 
     @Test
     void inverseFraction() {
-        Assertions.assertEquals(Fraction.create(8, -15), Fraction.create(-8, 15));
+        Fraction fraction = Fraction.create(8, -15);
+        Fraction fractionToCompare = Fraction.create(-8, 15);
+        
+        Assertions.assertEquals(fraction, fractionToCompare);
     }
 }
