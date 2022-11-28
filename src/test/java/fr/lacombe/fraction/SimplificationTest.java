@@ -1,6 +1,5 @@
 package fr.lacombe.fraction;
 
-import fr.lacombe.fraction.Fraction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
