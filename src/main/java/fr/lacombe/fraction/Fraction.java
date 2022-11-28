@@ -90,6 +90,11 @@ public class Fraction {
     }
 
     public Fraction divide(Fraction fraction) {
-        return this.multiply(Fraction.create(fraction.denominator, fraction.numerator));
+        return this.multiply(inverse(fraction));
     }
+
+    private static Fraction inverse(Fraction fraction) {
+        return Fraction.create(fraction.denominator, fraction.numerator);
+    }
+
 }
