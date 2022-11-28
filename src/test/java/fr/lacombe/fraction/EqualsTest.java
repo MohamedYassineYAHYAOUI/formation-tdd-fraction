@@ -12,13 +12,17 @@ public class EqualsTest {
 
     @Test
     void simplifiedFraction() {
-        Assertions.assertEquals(Fraction.create(1, 3), Fraction.create(2, 6));
+        Fraction fraction = Fraction.create(1, 3);
+        Fraction fractionToCompare = Fraction.create(2, 6);
+
+        Assertions.assertEquals(fraction, fractionToCompare);
     }
 
     @Test
     void differentFraction() {
         Fraction fraction = Fraction.create(2, 5);
         Fraction fractionToCompare = Fraction.create(5, 2);
+
         Assertions.assertNotEquals(fraction, fractionToCompare);
     }
 
