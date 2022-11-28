@@ -34,7 +34,7 @@ public class SubstractionTest {
         Fraction result = firstFraction.minus(secondFraction);
 
         Assertions.assertEquals(-1, result.getNumerator());
-        Assertions.assertEquals(1, result.getDenominator());
+        Assertions.assertEquals(2, result.getDenominator());
     }
 
     @Test
