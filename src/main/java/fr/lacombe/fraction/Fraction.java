@@ -50,7 +50,8 @@ public class Fraction {
                 this.denominator * fraction.denominator);
     }
 
-    public Fraction minus(Fraction secondFraction) {
-        return Fraction.create(numerator - secondFraction.numerator, denominator);
+    public Fraction minus(Fraction fraction) {
+        return create((this.numerator * fraction.denominator) - (this.denominator * fraction.numerator),
+                this.denominator * fraction.denominator);
     }
 }
