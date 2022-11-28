@@ -18,12 +18,7 @@ public class Fraction {
 
     public static Fraction create(int numerator, int denominator) {
         Fraction fraction = new Fraction(numerator, denominator);
-        return simplified(fraction);
-    }
-
-    private static Fraction simplified(Fraction fraction) {
-        int intGcd = computeGcd(fraction.numerator, fraction.denominator);
-        return new Fraction(fraction.numerator / intGcd, fraction.denominator / intGcd);
+        return fraction.simplified();
     }
 
     public static Fraction create(int numerator) {
@@ -35,6 +30,11 @@ public class Fraction {
         BigInteger b2 = BigInteger.valueOf(denominator);
         BigInteger gcd = b1.gcd(b2);
         return gcd.intValue();
+    }
+
+    private Fraction simplified() {
+        int intGcd = computeGcd(numerator, denominator);
+        return new Fraction(numerator / intGcd, denominator / intGcd);
     }
 
 
