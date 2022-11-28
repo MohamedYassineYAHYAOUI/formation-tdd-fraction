@@ -69,7 +69,13 @@ public class AdditionTest {
 
     /* To do all
     Faire un test pour la simplication
-
     */
+    @Test
+    void result_simplification_test(){
+        Fraction fraction = Fraction.create(2,2 );
+
+        Assertions.assertEquals(1, fraction.getNumerator());
+        Assertions.assertEquals(1, fraction.getDenominator());
+    }
 
 }

@@ -22,10 +22,10 @@ public class Fraction {
     }
 
     private static int computeGcd(int numerator, int denominator) {
-        BigInteger b1 = BigInteger.valueOf(numerator);
-        BigInteger b2 = BigInteger.valueOf(denominator);
-        BigInteger gcd = b1.gcd(b2);
-        return gcd.intValue();
+            BigInteger b1 = BigInteger.valueOf(numerator);
+            BigInteger b2 = BigInteger.valueOf(denominator);
+            BigInteger gcd = b1.gcd(b2);
+            return gcd.intValue();
     }
 
     public static Fraction create(int numerator) {
