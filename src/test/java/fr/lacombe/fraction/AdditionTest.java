@@ -15,9 +15,9 @@ public class AdditionTest {
     }
 
     @Test
-    void sameDenominator(){
-        Fraction firstFraction = Fraction.create(1, 2);
-        Fraction secondFraction = Fraction.create(6,2);
+    void sameDenominator() {
+        Fraction firstFraction = Fraction.simplifiedFraction(1, 2);
+        Fraction secondFraction = Fraction.simplifiedFraction(6, 2);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
@@ -27,12 +27,14 @@ public class AdditionTest {
 
     @Test
     void differentDenominator() {
-        Fraction firstFraction = Fraction.create(3, 2);
-        Fraction secondFraction = Fraction.create(2,3);
+        Fraction firstFraction = Fraction.simplifiedFraction(3, 2);
+        Fraction secondFraction = Fraction.simplifiedFraction(2, 3);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
         Assertions.assertEquals(13, resultFraction.getNumerator());
         Assertions.assertEquals(6, resultFraction.getDenominator());
     }
+
+
 }

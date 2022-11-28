@@ -16,16 +16,16 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public static Fraction create(int numerator, int denominator) {
+    public static Fraction simplifiedFraction(int numerator, int denominator) {
         int intGcd = computeGcd(numerator, denominator);
-        return new Fraction(numerator/intGcd, denominator/intGcd);
+        return new Fraction(numerator / intGcd, denominator / intGcd);
     }
 
     private static int computeGcd(int numerator, int denominator) {
-            BigInteger b1 = BigInteger.valueOf(numerator);
-            BigInteger b2 = BigInteger.valueOf(denominator);
-            BigInteger gcd = b1.gcd(b2);
-            return gcd.intValue();
+        BigInteger b1 = BigInteger.valueOf(numerator);
+        BigInteger b2 = BigInteger.valueOf(denominator);
+        BigInteger gcd = b1.gcd(b2);
+        return gcd.intValue();
     }
 
     public static Fraction create(int numerator) {
@@ -33,7 +33,7 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        return create((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
+        return simplifiedFraction((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
                 this.denominator * fraction.denominator);
     }
 
