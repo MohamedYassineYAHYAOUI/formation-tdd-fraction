@@ -10,6 +10,7 @@ public class MultiplicationTest {
         Assertions.assertEquals(Fraction.create(14), Fraction.create(2).multiply(Fraction.create(7)));
     }
 
+    @Test
     void negativeFraction() {
         Assertions.assertEquals(Fraction.create(-1, 25), Fraction.create(-1, 5).multiply(Fraction.create(1, 5)));
     }
