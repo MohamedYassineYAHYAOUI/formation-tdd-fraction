@@ -83,8 +83,6 @@ public class Fraction {
 
     @Override
     public String toString() {
-        if (numerator == -3)
-            return "-3";
-        return "1";
+        return Integer.toString(numerator);
     }
 }
