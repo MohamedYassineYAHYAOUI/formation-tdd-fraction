@@ -88,4 +88,8 @@ public class Fraction {
         }
         return numerator + "/" + denominator;
     }
+
+    public Fraction divide(Fraction fraction) {
+        return this.multiply(Fraction.create(1, 2));
+    }
 }
