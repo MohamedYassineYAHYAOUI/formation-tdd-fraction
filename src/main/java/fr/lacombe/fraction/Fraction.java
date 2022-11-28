@@ -7,6 +7,14 @@ public class Fraction {
     private final int numerator;
     private final int denominator;
 
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
     private Fraction(int numerator) {
         this(numerator, DEFAULT_DENOMINATOR);
     }
@@ -40,14 +48,6 @@ public class Fraction {
     public Fraction plus(Fraction fraction) {
         return create((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
                 this.denominator * fraction.denominator);
-    }
-
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
     }
 
     public Fraction minus(Fraction secondFraction) {
