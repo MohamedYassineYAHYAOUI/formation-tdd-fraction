@@ -83,9 +83,7 @@ public class Fraction {
 
     @Override
     public String toString() {
-        if (denominator != 1) {
-            return "1/2";
-        }
+        if (denominator != 1) return numerator + "/" + denominator;
         return Integer.toString(numerator);
     }
 }
