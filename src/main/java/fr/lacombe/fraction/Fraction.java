@@ -8,6 +8,10 @@ public class Fraction {
     private final int numerator;
     private final int denominator;
 
+    private Fraction inverse() {
+        return Fraction.create(denominator, numerator);
+    }
+
     public int getNumerator() {
         return numerator;
     }
@@ -90,11 +94,7 @@ public class Fraction {
     }
 
     public Fraction divide(Fraction fraction) {
-        return this.multiply(inverse(fraction));
-    }
-
-    private static Fraction inverse(Fraction fraction) {
-        return Fraction.create(fraction.denominator, fraction.numerator);
+        return this.multiply(fraction.inverse());
     }
 
 }
