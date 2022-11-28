@@ -67,9 +67,6 @@ public class AdditionTest {
         Assertions.assertEquals(expectedDenominator, resultFraction.getDenominator());
     }
 
-    /* To do all
-    Faire un test pour la simplication
-    */
     @ParameterizedTest
     @CsvSource({"2,2,1,1", "32,36,8,9"})
     void result_simplification_test(int numerator, int denominator, int expectedNumerator,  int expectedDenominator){
