@@ -38,18 +38,15 @@ public class AdditionTest {
         Assertions.assertEquals(6, resultFraction.getDenominator());
     }
 
-    @ParameterizedTest
-    @CsvSource({"3,4,8,9,8", "1,2,3,5,6"})
-    void given_different_fractions_with_same_numerator_de_should_return_sum_of_both_fraction(int numerator, int denominator1,
-                                                                                             int denominator2, int expectedNumerator,
-                                                                                             int expectedDenominator) {
-        Fraction firstFraction = Fraction.create(numerator, denominator1);
-        Fraction secondFraction = Fraction.create(numerator,denominator2);
+    @Test
+    void sameNumerator() {
+        Fraction firstFraction = Fraction.create(3, 4);
+        Fraction secondFraction = Fraction.create(3,8);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
-        Assertions.assertEquals(expectedNumerator, resultFraction.getNumerator());
-        Assertions.assertEquals(expectedDenominator, resultFraction.getDenominator());
+        Assertions.assertEquals(9, resultFraction.getNumerator());
+        Assertions.assertEquals(8, resultFraction.getDenominator());
     }
 
     @ParameterizedTest
