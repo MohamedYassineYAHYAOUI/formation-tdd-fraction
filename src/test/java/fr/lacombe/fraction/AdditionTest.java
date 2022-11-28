@@ -16,8 +16,8 @@ public class AdditionTest {
 
     @Test
     void sameDenominator() {
-        Fraction firstFraction = Fraction.simplifiedFraction(1, 2);
-        Fraction secondFraction = Fraction.simplifiedFraction(6, 2);
+        Fraction firstFraction = Fraction.simplified(1, 2);
+        Fraction secondFraction = Fraction.simplified(6, 2);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
@@ -27,8 +27,8 @@ public class AdditionTest {
 
     @Test
     void differentDenominator() {
-        Fraction firstFraction = Fraction.simplifiedFraction(3, 2);
-        Fraction secondFraction = Fraction.simplifiedFraction(2, 3);
+        Fraction firstFraction = Fraction.simplified(3, 2);
+        Fraction secondFraction = Fraction.simplified(2, 3);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
