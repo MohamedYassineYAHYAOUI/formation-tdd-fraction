@@ -20,5 +20,8 @@ public class EqualsTest {
         Assertions.assertNotEquals(Fraction.create(2, 5), Fraction.create(5, 2));
     }
 
-
+    @Test
+    void inverseFraction() {
+        Assertions.assertEquals(Fraction.create(8, -15), Fraction.create(-8, 15));
+    }
 }
