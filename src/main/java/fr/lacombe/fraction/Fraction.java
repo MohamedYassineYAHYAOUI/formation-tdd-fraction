@@ -17,11 +17,11 @@ public class Fraction {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Fraction fraction = (Fraction) o;
-        return numerator == fraction.numerator && denominator == fraction.denominator;
+    public boolean equals(Object fraction) {
+        if (this == fraction) return true;
+        if (fraction == null || getClass() != fraction.getClass()) return false;
+        Fraction castedFraction = (Fraction) fraction;
+        return numerator == castedFraction.numerator && denominator == castedFraction.denominator;
     }
 
     @Override
