@@ -17,7 +17,9 @@ public class EqualsTest {
 
     @Test
     void differentFraction() {
-        Assertions.assertNotEquals(Fraction.create(2, 5), Fraction.create(5, 2));
+        Fraction fraction = Fraction.create(2, 5);
+        Fraction fractionToCompare = Fraction.create(5, 2);
+        Assertions.assertNotEquals(fraction, fractionToCompare);
     }
 
     @Test
