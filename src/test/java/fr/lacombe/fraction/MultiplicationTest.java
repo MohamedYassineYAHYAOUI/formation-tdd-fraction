@@ -18,9 +18,8 @@ public class MultiplicationTest {
     void negative() {
         Fraction firstFraction = Fraction.create(-1, 5);
         Fraction secondFraction = Fraction.create(1, 5);
-        var expectedFraction = Fraction.create(-1, 25);
 
-        assertEquals(expectedFraction, firstFraction.multiply(secondFraction));
+        assertEquals(Fraction.create(-1, 25), firstFraction.multiply(secondFraction));
     }
 
     @Test
