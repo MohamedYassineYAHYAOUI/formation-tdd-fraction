@@ -44,10 +44,10 @@ public class Fraction {
 
     public static Fraction create(int numerator, int denominator) {
         Fraction fraction = new Fraction(numerator, denominator).simplified();
-        return denominator < 0 ? fraction.inverse() : fraction;
+        return denominator < 0 ? fraction.negate() : fraction;
     }
 
-    private Fraction inverse() {
+    private Fraction negate() {
         return new Fraction(-numerator, -denominator);
     }
 
