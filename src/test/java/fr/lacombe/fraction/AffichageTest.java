@@ -12,7 +12,7 @@ public class AffichageTest {
     }
 
     @Test
-    void integer1() {
+    void negativeIntegers() {
         assertEquals("-3", Fraction.create(-3).toString());
     }
 }
