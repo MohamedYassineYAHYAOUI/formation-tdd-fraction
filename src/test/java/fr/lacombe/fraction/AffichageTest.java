@@ -15,4 +15,9 @@ public class AffichageTest {
     void negativeIntegers() {
         assertEquals("-3", Fraction.create(-3).toString());
     }
+
+    @Test
+    void denominateurDifferentThanOne() {
+        assertEquals("1/2", Fraction.create(1, 2).toString());
+    }
 }
