@@ -21,8 +21,7 @@ public class Fraction {
     }
 
     public static Fraction create(int numerator, int denominator) {
-        Fraction fraction = new Fraction(numerator, denominator);
-        return fraction.simplified();
+        return new Fraction(numerator, denominator).simplified();
     }
 
     private Fraction simplified() {
