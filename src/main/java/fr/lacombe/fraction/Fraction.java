@@ -29,10 +29,11 @@ public class Fraction {
     }
 
     public static Fraction create(int numerator, int denominator) {
+        Fraction fraction = new Fraction(numerator, denominator).simplified();
         if (denominator < 0) {
-            return new Fraction(numerator, denominator).simplified().inverse();
+            return fraction.inverse();
         }
-        return new Fraction(numerator, denominator).simplified();
+        return fraction;
     }
 
     private Fraction inverse() {
