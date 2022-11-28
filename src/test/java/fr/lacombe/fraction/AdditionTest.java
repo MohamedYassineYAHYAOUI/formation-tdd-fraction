@@ -38,16 +38,6 @@ public class AdditionTest {
         Assertions.assertEquals(6, resultFraction.getDenominator());
     }
 
-    @Test
-    void sameNumerator() {
-        Fraction firstFraction = Fraction.create(3, 4);
-        Fraction secondFraction = Fraction.create(3,8);
-
-        Fraction resultFraction = firstFraction.plus(secondFraction);
-
-        Assertions.assertEquals(9, resultFraction.getNumerator());
-        Assertions.assertEquals(8, resultFraction.getDenominator());
-    }
 
     @ParameterizedTest
     @CsvSource({"2,2,1,1", "32,36,8,9"})
