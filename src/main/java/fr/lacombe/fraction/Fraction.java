@@ -77,7 +77,7 @@ public class Fraction {
         return create(-numerator, denominator);
     }
 
-    public int multiply(Fraction fraction) {
-        return 14;
+    public Fraction multiply(Fraction fraction) {
+        return Fraction.create(numerator * fraction.numerator, denominator * fraction.denominator);
     }
 }

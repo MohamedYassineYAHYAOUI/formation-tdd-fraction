@@ -7,6 +7,7 @@ public class MultiplicationTest {
 
     @Test
     void integers() {
-        Assertions.assertEquals(14, Fraction.create(2).multiply(Fraction.create(7)));
+        Assertions.assertEquals(Fraction.create(14), Fraction.create(2).multiply(Fraction.create(7)));
     }
+
 }
