@@ -30,10 +30,7 @@ public class Fraction {
 
     public static Fraction create(int numerator, int denominator) {
         Fraction fraction = new Fraction(numerator, denominator).simplified();
-        if (denominator < 0) {
-            return fraction.inverse();
-        }
-        return fraction;
+        return denominator < 0 ? fraction.inverse() : fraction;
     }
 
     private Fraction inverse() {
