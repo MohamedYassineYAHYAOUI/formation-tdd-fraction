@@ -30,13 +30,13 @@ public class Fraction {
 
     public static Fraction create(int numerator, int denominator) {
         if (denominator < 0) {
-            return Fraction.inverse(numerator, denominator);
+            return Fraction.inverse(new Fraction(numerator, denominator).simplified());
         }
         return new Fraction(numerator, denominator).simplified();
     }
 
-    private static Fraction inverse(int numerator, int denominator) {
-        return Fraction.create(-numerator, -denominator).simplified();
+    private static Fraction inverse(Fraction fraction) {
+        return new Fraction(-fraction.numerator, -fraction.denominator);
     }
 
     private Fraction simplified() {
