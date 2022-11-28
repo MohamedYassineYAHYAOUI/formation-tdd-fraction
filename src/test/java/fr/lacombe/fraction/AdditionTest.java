@@ -18,16 +18,15 @@ public class AdditionTest {
         Assertions.assertEquals(expectedResult, resultFraction.getNumerator());
     }
 
-    @ParameterizedTest
-    @CsvSource({"1,6,2,7", "1,4,2,5","1,2,2,3","1,1,3,2","2,5,3,7","2,6,5,8"})
-    void sameDenominator(int numerator1,int numerator2, int commonDenominator, int expectedNumerator){
-        Fraction firstFraction = Fraction.create(numerator1, commonDenominator);
-        Fraction secondFraction = Fraction.create(numerator2,commonDenominator);
+    @Test
+    void sameDenominator(){
+        Fraction firstFraction = Fraction.create(1, 2);
+        Fraction secondFraction = Fraction.create(6,2);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
-        Assertions.assertEquals(expectedNumerator, resultFraction.getNumerator());
-        Assertions.assertEquals(commonDenominator, resultFraction.getDenominator());
+        Assertions.assertEquals(7, resultFraction.getNumerator());
+        Assertions.assertEquals(2, resultFraction.getDenominator());
     }
 
     @Test
