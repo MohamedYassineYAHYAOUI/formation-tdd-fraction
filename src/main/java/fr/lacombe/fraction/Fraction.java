@@ -29,6 +29,9 @@ public class Fraction {
     }
 
     public static Fraction create(int numerator, int denominator) {
+        if (denominator < 0) {
+            return new Fraction(-numerator, -denominator).simplified();
+        }
         return new Fraction(numerator, denominator).simplified();
     }
 

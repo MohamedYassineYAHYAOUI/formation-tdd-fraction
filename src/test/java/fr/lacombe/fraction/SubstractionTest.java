@@ -36,4 +36,11 @@ public class SubstractionTest {
         Assertions.assertEquals(1, result.getNumerator());
         Assertions.assertEquals(4, result.getDenominator());
     }
+
+    @Test
+    void negativeDenominator() {
+        Fraction fraction = Fraction.create(8, -15);
+        Assertions.assertEquals(-8, fraction.getNumerator());
+        Assertions.assertEquals(15, fraction.getDenominator());
+    }
 }
