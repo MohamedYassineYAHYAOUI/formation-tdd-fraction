@@ -17,12 +17,13 @@ public class Fraction {
     }
 
     public static Fraction create(int numerator, int denominator) {
-        return simplified(numerator, denominator);
+        Fraction fraction = new Fraction(numerator, denominator);
+        return simplified(fraction);
     }
 
-    private static Fraction simplified(int numerator, int denominator) {
-        int intGcd = computeGcd(numerator, denominator);
-        return new Fraction(numerator / intGcd, denominator / intGcd);
+    private static Fraction simplified(Fraction fraction) {
+        int intGcd = computeGcd(fraction.numerator, fraction.denominator);
+        return new Fraction(fraction.numerator / intGcd, fraction.denominator / intGcd);
     }
 
     public static Fraction create(int numerator) {
