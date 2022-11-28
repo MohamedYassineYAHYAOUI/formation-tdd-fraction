@@ -9,13 +9,13 @@ public class AdditionTest {
     @ParameterizedTest
     @CsvSource({"3,5,8", "3,1,4", "3,2,5", "0,0,0", "0,3,3", "5,0,5",
             "-2,1,-1", "-4,-1,-5",  "3,-1,2", "0,-2,-2"})
-    void given_two_integers_should_return_sum_of_both(int input1, int input2, int expected) {
-        Fraction firstFraction = Fraction.create(input1);
-        Fraction secondFraction = Fraction.create(input2);
+    void integers(int fist, int second, int expectedResult) {
+        Fraction firstFraction = Fraction.create(fist);
+        Fraction secondFraction = Fraction.create(second);
 
         Fraction resultFraction = firstFraction.plus(secondFraction);
 
-        Assertions.assertEquals(expected, resultFraction.getNumerator());
+        Assertions.assertEquals(expectedResult, resultFraction.getNumerator());
     }
 
     @ParameterizedTest
