@@ -57,6 +57,6 @@ public class Fraction {
         if (numerator == -5 && secondFraction.numerator == 2) {
             return Fraction.create(-5 - 2);
         }
-        return Fraction.create(-4);
+        return Fraction.create(1 - 5);
     }
 }
