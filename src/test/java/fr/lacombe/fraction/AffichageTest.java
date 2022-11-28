@@ -10,4 +10,9 @@ public class AffichageTest {
     void integer() {
         assertEquals("1", Fraction.create(1).toString());
     }
+
+    @Test
+    void integer1() {
+        assertEquals("-3", Fraction.create(-3).toString());
+    }
 }
