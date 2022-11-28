@@ -39,13 +39,12 @@ public class AdditionTest {
     }
 
 
-    @ParameterizedTest
-    @CsvSource({"2,2,1,1", "32,36,8,9"})
-    void result_simplification_test(int numerator, int denominator, int expectedNumerator,  int expectedDenominator){
-        Fraction fraction = Fraction.create(numerator,denominator );
+    @Test
+    void simplification(){
+        Fraction fraction = Fraction.create(32,36 );
 
-        Assertions.assertEquals(expectedNumerator, fraction.getNumerator());
-        Assertions.assertEquals(expectedDenominator, fraction.getDenominator());
+        Assertions.assertEquals(8, fraction.getNumerator());
+        Assertions.assertEquals(9, fraction.getDenominator());
     }
 
 }
