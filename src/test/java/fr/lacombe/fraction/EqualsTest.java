@@ -7,7 +7,10 @@ public class EqualsTest {
 
     @Test
     void sameFraction() {
-        Assertions.assertEquals(Fraction.create(1, 2), Fraction.create(1, 2));
+        Fraction fraction = Fraction.create(1, 2);
+        Fraction fractionToCompare = Fraction.create(1, 2);
+
+        Assertions.assertEquals(fraction, fractionToCompare);
     }
 
     @Test
