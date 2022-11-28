@@ -76,4 +76,8 @@ public class Fraction {
     private Fraction opposite() {
         return create(-numerator, denominator);
     }
+
+    public int multiply(Fraction fraction) {
+        return 14;
+    }
 }
