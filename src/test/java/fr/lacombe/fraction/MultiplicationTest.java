@@ -24,11 +24,10 @@ public class MultiplicationTest {
 
     @Test
     void twoNegative() {
-        var expectedFraction = Fraction.create(3, 4);
         Fraction secondFraction = Fraction.create(3, -2);
         Fraction firstFraction = Fraction.create(-5, 10);
 
-        assertEquals(expectedFraction, firstFraction.multiply(secondFraction));
+        assertEquals(Fraction.create(3, 4), firstFraction.multiply(secondFraction));
     }
 
 }
