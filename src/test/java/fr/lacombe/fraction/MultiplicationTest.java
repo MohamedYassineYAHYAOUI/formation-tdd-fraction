@@ -7,7 +7,11 @@ public class MultiplicationTest {
 
     @Test
     void integers() {
-        Assertions.assertEquals(Fraction.create(14), Fraction.create(2).multiply(Fraction.create(7)));
+        Fraction firstFraction = Fraction.create(2);
+        Fraction secondFraction = Fraction.create(7);
+        Fraction expected = Fraction.create(14);
+
+        Assertions.assertEquals(expected, firstFraction.multiply(secondFraction));
     }
 
     @Test
@@ -18,7 +22,8 @@ public class MultiplicationTest {
 
     @Test
     void twoNegative() {
-        Assertions.assertEquals(Fraction.create(3, 4), Fraction.create(-5, 10).multiply(Fraction.create(3, -2)));
+        var expectedFraction = Fraction.create(3, 4);
+        Assertions.assertEquals(expectedFraction, Fraction.create(-5, 10).multiply(Fraction.create(3, -2)));
     }
 
 }
