@@ -3,7 +3,7 @@ package fr.lacombe.fraction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class EqualtsTest {
+public class EqualsTest {
 
     @Test
     void sameFraction() {
@@ -14,4 +14,11 @@ public class EqualtsTest {
     void simplifiedFraction() {
         Assertions.assertEquals(Fraction.create(1, 3), Fraction.create(2, 6));
     }
+
+    @Test
+    void differentFraction() {
+        Assertions.assertNotEquals(Fraction.create(2, 5), Fraction.create(5, 2));
+    }
+
+
 }
