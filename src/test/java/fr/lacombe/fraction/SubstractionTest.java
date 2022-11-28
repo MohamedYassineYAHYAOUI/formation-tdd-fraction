@@ -36,4 +36,16 @@ public class SubstractionTest {
         Assertions.assertEquals(-1, result.getNumerator());
         Assertions.assertEquals(1, result.getDenominator());
     }
+
+    @Test
+    void sameDenominator3() {
+        Fraction firstFraction = Fraction.create(-1, 3);
+        Fraction secondFraction = Fraction.create(1, 3);
+
+        Fraction result = firstFraction.minus(secondFraction);
+
+        Assertions.assertEquals(-2, result.getNumerator());
+        Assertions.assertEquals(3, result.getDenominator());
+    }
+
 }
