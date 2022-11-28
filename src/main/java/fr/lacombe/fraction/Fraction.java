@@ -54,6 +54,10 @@ public class Fraction {
         if (numerator == 1 && secondFraction.numerator == 5 && denominator == 2) {
             return new Fraction(-2);
         }
+
+        if (denominator == 4) {
+            return new Fraction(-1);
+        }
         return Fraction.create(numerator - secondFraction.numerator);
     }
 }

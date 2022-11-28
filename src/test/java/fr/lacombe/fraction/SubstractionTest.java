@@ -25,4 +25,15 @@ public class SubstractionTest {
         Assertions.assertEquals(-2, result.getNumerator());
         Assertions.assertEquals(1, result.getDenominator());
     }
+
+    @Test
+    void sameDenominator2() {
+        Fraction firstFraction = Fraction.create(-3, 4);
+        Fraction secondFraction = Fraction.create(-1, 4);
+
+        Fraction result = firstFraction.minus(secondFraction);
+
+        Assertions.assertEquals(-1, result.getNumerator());
+        Assertions.assertEquals(1, result.getDenominator());
+    }
 }
