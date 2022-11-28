@@ -14,7 +14,7 @@ public class SubstractionTest {
 
         Assertions.assertEquals(-4, result.getNumerator());
     }
-    
+
     @Test
     void sameDenominator() {
         Fraction firstFraction = Fraction.create(-1, 3);
@@ -25,5 +25,4 @@ public class SubstractionTest {
         Assertions.assertEquals(-2, result.getNumerator());
         Assertions.assertEquals(3, result.getDenominator());
     }
-
 }
