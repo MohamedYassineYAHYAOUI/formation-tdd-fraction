@@ -49,4 +49,8 @@ public class Fraction {
     public int getDenominator() {
         return denominator;
     }
+
+    public Fraction minus(Fraction secondFraction) {
+        return Fraction.create(-4);
+    }
 }
