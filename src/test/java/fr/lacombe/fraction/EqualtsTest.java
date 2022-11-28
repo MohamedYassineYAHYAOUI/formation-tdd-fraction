@@ -9,4 +9,9 @@ public class EqualtsTest {
     void sameFraction() {
         Assertions.assertEquals(Fraction.create(1, 2), Fraction.create(1, 2));
     }
+
+    @Test
+    void simplifiedFraction() {
+        Assertions.assertEquals(Fraction.create(1, 3), Fraction.create(2, 6));
+    }
 }
