@@ -3,7 +3,7 @@ package fr.lacombe.fraction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SoustractionTest {
+public class SubstractionTest {
 
     @Test
     void integers() {
