@@ -16,9 +16,13 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public static Fraction simplified(int numerator, int denominator) {
+    public static Fraction createSimplified(int numerator, int denominator) {
         int intGcd = computeGcd(numerator, denominator);
         return new Fraction(numerator / intGcd, denominator / intGcd);
+    }
+
+    public static Fraction create(int numerator) {
+        return new Fraction(numerator);
     }
 
     private static int computeGcd(int numerator, int denominator) {
@@ -28,12 +32,9 @@ public class Fraction {
         return gcd.intValue();
     }
 
-    public static Fraction create(int numerator) {
-        return new Fraction(numerator);
-    }
 
     public Fraction plus(Fraction fraction) {
-        return simplified((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
+        return createSimplified((this.numerator * fraction.denominator) + (this.denominator * fraction.numerator),
                 this.denominator * fraction.denominator);
     }
 
