@@ -90,6 +90,6 @@ public class Fraction {
     }
 
     public Fraction divide(Fraction fraction) {
-        return this.multiply(Fraction.create(1, 2));
+        return this.multiply(Fraction.create(fraction.denominator, fraction.numerator));
     }
 }
