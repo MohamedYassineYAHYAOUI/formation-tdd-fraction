@@ -52,7 +52,7 @@ public class Fraction {
 
     public Fraction minus(Fraction secondFraction) {
         if (numerator == 8 && secondFraction.numerator == 2) {
-            return Fraction.create(8 - 2);
+            return Fraction.create(numerator - secondFraction.numerator);
         }
         if (numerator == -5 && secondFraction.numerator == 2) {
             return Fraction.create(-5 - 2);
