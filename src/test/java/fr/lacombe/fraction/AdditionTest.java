@@ -2,8 +2,6 @@ package fr.lacombe.fraction;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 public class AdditionTest {
     @Test
@@ -37,14 +35,4 @@ public class AdditionTest {
         Assertions.assertEquals(13, resultFraction.getNumerator());
         Assertions.assertEquals(6, resultFraction.getDenominator());
     }
-
-
-    @Test
-    void simplification(){
-        Fraction fraction = Fraction.create(32,36 );
-
-        Assertions.assertEquals(8, fraction.getNumerator());
-        Assertions.assertEquals(9, fraction.getDenominator());
-    }
-
 }
