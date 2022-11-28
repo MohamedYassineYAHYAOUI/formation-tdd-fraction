@@ -1,7 +1,8 @@
 package fr.lacombe.fraction;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MultiplicationTest {
 
@@ -9,9 +10,8 @@ public class MultiplicationTest {
     void integers() {
         Fraction firstFraction = Fraction.create(2);
         Fraction secondFraction = Fraction.create(7);
-        Fraction expected = Fraction.create(14);
 
-        Assertions.assertEquals(expected, firstFraction.multiply(secondFraction));
+        assertEquals(Fraction.create(14), firstFraction.multiply(secondFraction));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class MultiplicationTest {
         Fraction secondFraction = Fraction.create(1, 5);
         var expectedFraction = Fraction.create(-1, 25);
 
-        Assertions.assertEquals(expectedFraction, firstFraction.multiply(secondFraction));
+        assertEquals(expectedFraction, firstFraction.multiply(secondFraction));
     }
 
     @Test
@@ -28,8 +28,8 @@ public class MultiplicationTest {
         var expectedFraction = Fraction.create(3, 4);
         Fraction secondFraction = Fraction.create(3, -2);
         Fraction firstFraction = Fraction.create(-5, 10);
-        
-        Assertions.assertEquals(expectedFraction, firstFraction.multiply(secondFraction));
+
+        assertEquals(expectedFraction, firstFraction.multiply(secondFraction));
     }
 
 }
