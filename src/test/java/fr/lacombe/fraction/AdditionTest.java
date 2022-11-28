@@ -70,12 +70,13 @@ public class AdditionTest {
     /* To do all
     Faire un test pour la simplication
     */
-    @Test
-    void result_simplification_test(){
-        Fraction fraction = Fraction.create(2,2 );
+    @ParameterizedTest
+    @CsvSource({"2,2,1,1", "32,36,8,9"})
+    void result_simplification_test(int numerator, int denominator, int expectedNumerator,  int expectedDenominator){
+        Fraction fraction = Fraction.create(numerator,denominator );
 
-        Assertions.assertEquals(1, fraction.getNumerator());
-        Assertions.assertEquals(1, fraction.getDenominator());
+        Assertions.assertEquals(expectedNumerator, fraction.getNumerator());
+        Assertions.assertEquals(expectedDenominator, fraction.getDenominator());
     }
 
 }
