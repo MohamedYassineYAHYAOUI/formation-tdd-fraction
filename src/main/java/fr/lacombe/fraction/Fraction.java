@@ -56,6 +56,10 @@ public class Fraction {
     }
 
     public Fraction minus(Fraction fraction) {
-        return this.plus(create(-fraction.numerator, fraction.denominator));
+        return this.plus(fraction.opposite());
+    }
+    
+    private Fraction opposite() {
+        return create(-numerator, denominator);
     }
 }
